@@ -5,25 +5,35 @@
     <title>WT Catalog Builder</title>
     <link href="../css/index.css" type="text/css" rel="stylesheet">
     <script src="../js/CSInterface.js"></script>
-    <script src="../js/ui.js"></script>
+    <script type='text/javascript' lang='javascript' src='../saxon/SaxonceDebug/Saxonce.nocache.js' ></script>
+    <script src="../js/ui.js" ></script>
 </head>
 <body>
-    <div class="main">
-        <h1 class="title">Catalog Builder</h1>
-        <form class="selector-form">
-            <div class="selector">
-                <label  for="xml-selector-text">select xml</label>
-                <input id="xml-selector-text" type="text" placeholder="select xml" />
-                <input id="xml-selector-file" type="file" style="display:none" />
-                <button id="xml-selector" onclick="chooseXml(event)">choose</button>
-            </div>
-            <div class="selector">
-                <label for="image-folder-selector-text">select image folder</label>
-                <input id="image-folder-selector-text" type="text" placeholder="select xml" />
-                <input id="image-folder-selector-file" type="file" style="display:none" />
-                <button id="image-folder-selector" onClick="chooseImgFolder(event)">choose</button>
-            </div>
-        </form>
-    </div>
+<div class="main">
+    <h1 class="title">Catalog Builder</h1>
+    <form class="selector-form">
+        <div class="selector">
+            <label for="xml-selector-text">select xml</label>
+            <input id="xml-selector-text" type="text" placeholder="select xml" />
+            <input id="xml-selector-file" type="file" style="display:none" />
+            <button id="xml-selector" onclick="chooseXml(event)">choose</button>
+        </div>
+        <div class="selector">
+            <label for="xsl-selector-text">select xsl</label>
+            <input id="xsl-selector-text" type="text" placeholder="select xsl" />
+            <input id="xsl-selector-file" type="file" style="display:none" />
+            <button id="xsl-selector" onclick="chooseXsl(event)">choose</button>
+        </div>
+        <div class="selector">
+            <label for="image-folder-selector-text">select image folder</label>
+            <input id="image-folder-selector-text" type="text" placeholder="select xml" />
+            <input id="image-folder-selector-file" type="file" style="display:none" />
+            <button id="image-folder-selector" onClick="chooseImgFolder(event)">choose</button>
+        </div>
+        <div class="selector submit">
+            <button id="submit-button" onClick="buildCatalog(event)">go</button>
+        </div>
+    </form>
+</div>
 </body>
 </html>

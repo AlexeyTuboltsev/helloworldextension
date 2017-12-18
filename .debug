@@ -1,0 +1,7 @@
+ <ExtensionList>
+    <Extension Id="com.wt.CATALOGBUILDER.ModalDialog" Version="6.1.0">
+        <HostList>
+            <Host Name="IDSN" Port="3333"/>
+        </HostList>
+    </Extension>
+</ExtensionList>
