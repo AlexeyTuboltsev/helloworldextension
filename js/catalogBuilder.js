@@ -121,20 +121,17 @@ const rebuildXML = function (xmlFilePath, xslFilePath, imgFolderPath, imgFolders
 
 const buildCatalog = function (e) {
   e.preventDefault()
-  // const folders = checkImgFolder(imgFolderPath)
-  // const rebuiltXML = rebuildXML(xmlFilePath, xslFilePath, imgFolderPath, folders)
-  // const serializedXML = new XMLSerializer().serializeToString(rebuiltXML)
-  // const path = __dir + 'asd.xml'
-  // const result = window.cep.fs.writeFile(path, serializedXML)
-  // if (result.err !== 0) {
-  //   console.log('error on saving: ' + result.err)
-  // }
+  const folders = checkImgFolder(imgFolderPath)
+  const rebuiltXML = rebuildXML(xmlFilePath, xslFilePath, imgFolderPath, folders)
+  const serializedXML = new XMLSerializer().serializeToString(rebuiltXML)
+  const path = __dir + 'asd.xml'
+  const result = window.cep.fs.writeFile(path, serializedXML)
+  if (result.err !== 0) {
+    console.log('error on saving: ' + result.err)
+  }
   const csInterface = new CSInterface();
-  // const mainJSX =  csInterface.getSystemPath(SystemPath.EXTENSION) + '/jsx/main.jsx';
-  // const script = '$.evalFile("' + mainJSX + '");';
-  // console.log(script)
-  csInterface.evalScript('app.documents.add()', function(result){
-    alert(result)
+  csInterface.evalScript('main("'+ __dir + 'asd.xml' +'")', function(result){
+    // alert(result)
   });
 }
 

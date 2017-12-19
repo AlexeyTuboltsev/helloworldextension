@@ -1,7 +1,3 @@
-const main = require('./assets/main')
-module.exports = `
-${main}
-
 function userSettings() {
   return {
     xslFile : "", //leave blank for default or for prompt
@@ -340,4 +336,3 @@ function docSetup(myDoc,_userVariables,getStyle){
 
   _debugInfo.writeWithTimestamp("[docSetup] finish");
 }
-`

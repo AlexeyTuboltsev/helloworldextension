@@ -19,7 +19,7 @@
             <DispatchInfo>
                 <Resources>
                     <MainPath>./html/index.html</MainPath>
-					<!--<ScriptPath>./jsx/main.jsx</ScriptPath>-->
+					<ScriptPath>./jsx/main.jsx</ScriptPath>
 					<CEFCommandLine>
 						<Parameter>--enable-nodejs</Parameter>
                     </CEFCommandLine>
@@ -28,7 +28,7 @@
                     <AutoVisible>true</AutoVisible>
                 </Lifecycle>
                 <UI>
-                    <Type>ModalDialog</Type>
+                    <Type>Modeless</Type>
                     <Menu  Placement="'Main:&amp;File',600.0,'KBSCE Window menu'">Build Catalog</Menu>
                     <Geometry>
                         <Size>
